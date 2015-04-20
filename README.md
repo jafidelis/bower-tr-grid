@@ -1,7 +1,9 @@
-# bower-ui-grid
+credits for [UI GRID](https://github.com/angular-ui/ng-grid)
+
+# bower-tr-grid
 
 This repo is for distribution on `bower`. The source for this module is in the
-[main UI Grid repo](https://github.com/angular-ui/ng-grid).
+[main TR Grid repo](https://github.com/jafidelis/tr-grid).
 Please file issues and pull requests against that repo.
 
 ## Install
