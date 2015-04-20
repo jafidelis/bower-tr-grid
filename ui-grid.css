@@ -1,9 +1,9 @@
 /*!
- * ui-grid - v3.0.0-rc.20 - 2015-02-24
+ * ui-grid - v3.0.0-rc.20-d2e196c - 2015-04-20
  * Copyright (c) 2015 ; License: MIT 
  */
 .ui-grid {
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
   box-sizing: content-box;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -24,15 +24,15 @@
   width: 1px;
 }
 .ui-grid-header-cell:not(:last-child) .ui-grid-vertical-bar {
-  background-color: #d4d4d4;
+  background-color: #dddddd;
 }
 .ui-grid-cell:not(:last-child) .ui-grid-vertical-bar {
-  background-color: #d4d4d4;
+  background-color: #dddddd;
 }
 .ui-grid-header-cell:last-child .ui-grid-vertical-bar {
   right: -1px;
   width: 1px;
-  background-color: #d4d4d4;
+  background-color: #dddddd;
 }
 .ui-grid-clearfix:before,
 .ui-grid-clearfix:after {
@@ -46,27 +46,17 @@
   visibility: hidden;
 }
 .ui-grid-top-panel-background {
-  background: #f3f3f3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
-  background: -o-linear-gradient(#ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  background: #dddddd;
 }
 .ui-grid-header {
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 1px solid #dddddd;
   box-sizing: content-box;
 }
 .ui-grid-top-panel {
   position: relative;
   overflow: hidden;
   font-weight: bold;
-  background: #f3f3f3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
-  background: -o-linear-gradient(#ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  background: #dddddd;
   -webkit-border-top-right-radius: -1px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -109,7 +99,7 @@
   box-sizing: border-box;
   background-color: inherit;
   border-right: 1px solid;
-  border-color: #d4d4d4;
+  border-color: #dddddd;
   display: table-cell;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -212,12 +202,29 @@
 .ui-grid-filter-container .ui-grid-filter-button [class^="ui-grid-icon"]:hover {
   opacity: 1;
 }
+.ui-grid-filter-container .ui-grid-filter-button-select {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.ui-grid-filter-container .ui-grid-filter-button-select [class^="ui-grid-icon"] {
+  position: absolute;
+  top: 50%;
+  line-height: 32px;
+  margin-top: -16px;
+  right: 0px;
+  opacity: 0.66;
+}
+.ui-grid-filter-container .ui-grid-filter-button-select [class^="ui-grid-icon"]:hover {
+  opacity: 1;
+}
 input[type="text"].ui-grid-filter-input {
   padding: 0;
   margin: 0;
   border: 0;
   width: 100%;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
   -webkit-border-top-right-radius: 0px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -235,7 +242,32 @@ input[type="text"].ui-grid-filter-input {
   background-clip: padding-box;
 }
 input[type="text"].ui-grid-filter-input:hover {
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
+}
+select.ui-grid-filter-select {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 90%;
+  border: 1px solid #dddddd;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+select.ui-grid-filter-select:hover {
+  border: 1px solid #dddddd;
 }
 .ui-grid-render-container {
   position: inherit;
@@ -264,8 +296,8 @@ input[type="text"].ui-grid-filter-input:hover {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.ui-grid-viewport :focus {
-  outline: none;
+.ui-grid-viewport:focus {
+  outline: none !important;
 }
 .ui-grid-canvas {
   position: relative;
@@ -278,7 +310,7 @@ input[type="text"].ui-grid-filter-input:hover {
   background-color: #f3f3f3;
 }
 .ui-grid-row:last-child .ui-grid-cell {
-  border-bottom-color: #d4d4d4;
+  border-bottom-color: #dddddd;
   border-bottom-style: solid;
 }
 .ui-grid-no-row-overlay {
@@ -288,12 +320,7 @@ input[type="text"].ui-grid-filter-input:hover {
   left: 0;
   right: 0;
   margin: 10%;
-  background: #f3f3f3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
-  background: -o-linear-gradient(#ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  background: #dddddd;
   -webkit-border-top-right-radius: 0px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -309,7 +336,7 @@ input[type="text"].ui-grid-filter-input:hover {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
   font-size: 2em;
   text-align: center;
 }
@@ -329,7 +356,7 @@ input[type="text"].ui-grid-filter-input:hover {
   float: left;
   background-color: inherit;
   border-right: 1px solid;
-  border-color: #d4d4d4;
+  border-color: #dddddd;
   box-sizing: border-box;
 }
 .ui-grid-cell:last-child {
@@ -355,28 +382,18 @@ input[type="text"].ui-grid-filter-input:hover {
 }
 .ui-grid-row-header-cell {
   background-color: #F0F0EE !important;
-  border-bottom: solid 1px #d4d4d4;
+  border-bottom: solid 1px #dddddd;
 }
 .ui-grid-footer-panel-background {
-  background: #f3f3f3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
-  background: -o-linear-gradient(#ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  background: #dddddd;
 }
 .ui-grid-footer-panel {
   position: relative;
-  border-bottom: 1px solid #d4d4d4;
-  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
   overflow: hidden;
   font-weight: bold;
-  background: #f3f3f3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
-  background: -o-linear-gradient(#ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  background: #dddddd;
   -webkit-border-top-right-radius: -1px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -425,7 +442,7 @@ input[type="text"].ui-grid-filter-input:hover {
   overflow: hidden;
   background-color: inherit;
   border-right: 1px solid;
-  border-color: #d4d4d4;
+  border-color: #dddddd;
   box-sizing: border-box;
   display: table-cell;
 }
@@ -437,7 +454,7 @@ input[type="text"].ui-grid-filter-input {
   margin: 0;
   border: 0;
   width: 100%;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
   -webkit-border-top-right-radius: 0px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -455,14 +472,14 @@ input[type="text"].ui-grid-filter-input {
   background-clip: padding-box;
 }
 input[type="text"].ui-grid-filter-input:hover {
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
 }
 .ui-grid-menu-button {
   z-index: 2;
   position: absolute;
   right: 0;
-  background: #f3f3f3;
-  border: 1px solid #d4d4d4;
+  background: #dddddd;
+  border: 1px solid #dddddd;
   cursor: pointer;
   min-height: 27px;
   font-weight: normal;
@@ -476,7 +493,7 @@ input[type="text"].ui-grid-filter-input:hover {
 .ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid {
   overflow-y: scroll;
   max-height: 300px;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
 }
 .ui-grid-menu {
   z-index: 2;
@@ -487,8 +504,8 @@ input[type="text"].ui-grid-filter-input:hover {
   box-sizing: content-box;
 }
 .ui-grid-menu .ui-grid-menu-inner {
-  background: #f3f3f3;
-  border: 1px solid #d4d4d4;
+  background: #dddddd;
+  border: 1px solid #dddddd;
   position: relative;
   white-space: nowrap;
   -webkit-border-radius: 0px;
@@ -516,10 +533,10 @@ input[type="text"].ui-grid-filter-input:hover {
   -webkit-box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
-  background-color: #cecece;
+  background-color: #e0eff9;
 }
 .ui-grid-menu .ui-grid-menu-inner ul li:not(:last-child) {
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 1px solid #dddddd;
 }
 .ui-grid-sortarrow {
   right: 5px;
@@ -603,7 +620,7 @@ input[type="text"].ui-grid-filter-input:hover {
 }
 .ui-grid[dir=rtl] .ui-grid-cell:last-child,
 .ui-grid[dir=rtl] .ui-grid-header-cell:last-child {
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #dddddd;
   border-left: 0;
 }
 .ui-grid[dir=rtl] .ui-grid-header-cell:first-child .ui-grid-vertical-bar,
@@ -616,8 +633,8 @@ input[type="text"].ui-grid-filter-input:hover {
   position: absolute;
   left: 0;
   right: auto;
-  background: #f3f3f3;
-  border: 1px solid #d4d4d4;
+  background: #dddddd;
+  border: 1px solid #dddddd;
   cursor: pointer;
   min-height: 27px;
   font-weight: normal;
@@ -743,6 +760,96 @@ input[type="text"].ui-grid-filter-input:hover {
 * @section font library path
 */
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid-viewport {
+  overflow-x: auto !important;
+}
+.ui-grid-top-panel {
+  color: #24505D !important;
+  border: 0 !important;
+}
+.ui-grid-footer-panel {
+  background-color: #899294 !important;
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.ui-grid-footer-info,
+.ui-grid-pager-panel {
+  background-color: #E5E4E4 !important;
+}
+.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+  border-color: #dddddd !important;
+}
+.ui-grid-icon-container i {
+  color: #24505d;
+}
+.ui-grid-icon-container i::before {
+  margin-right: 0;
+}
+.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:last-child {
+  border-color: #C8C7C7 !important;
+}
+.ui-grid-menu-button {
+  background-color: #dddddd;
+  top: -1px;
+  right: -1px;
+  border: none;
+  min-height: 33px;
+}
+.ui-grid-icon-container {
+  height: 33px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.ui-grid-icon-container i {
+  color: #24505d;
+}
+.ui-grid-icon-container:hover,
+.ui-grid-icon-container:focus,
+.ui-grid-icon-container:active {
+  background-color: #f5f5f5;
+}
+.ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid {
+  border: none;
+}
+.ui-grid-menu {
+  margin-top: 3px;
+  padding: 0;
+  border-top: 2px solid #24505d;
+  overflow-y: auto;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.ui-grid-menu-mid:before {
+  content: "";
+  position: fixed;
+  display: inline-block;
+  right: 2px;
+  margin-top: -9px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #24505d;
+  z-index: 4;
+}
+.ui-grid-menu .ui-grid-menu-inner {
+  border: none;
+  box-shadow: none;
+  background-color: #f5f5f5;
+}
+.ui-grid-menu .ui-grid-menu-inner ul {
+  min-width: 150px;
+}
+.ui-grid-menu .ui-grid-menu-inner ul li {
+  padding-right: 23px;
+}
+.ui-grid-menu .ui-grid-menu-inner ul li:hover {
+  background-color: #e5e4e4;
+  box-shadow: none;
+}
+.ui-grid-menu .ui-grid-menu-inner ul li.ui-grid-menu-item-active {
+  box-shadow: none;
+  background-color: #e0eff9;
+}
 
 /* This file contains variable declarations (do not remove this line) */
 /*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
@@ -769,7 +876,7 @@ input[type="text"].ui-grid-filter-input:hover {
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-cell-focus {
   outline: 0;
-  background-color: #b3c4c7;
+  background-color: #b2d9f7;
 }
 
 /* This file contains variable declarations (do not remove this line) */
@@ -816,7 +923,7 @@ div.ui-grid-cell input.ng-invalid {
   border: 1px solid #fc8f8f;
 }
 div.ui-grid-cell input.ng-valid {
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
 }
 
 /* This file contains variable declarations (do not remove this line) */
@@ -848,6 +955,10 @@ div.ui-grid-cell input.ng-valid {
 .expandableRow .ui-grid-row:nth-child(even) .ui-grid-cell {
   background-color: #f3f3f3;
 }
+.scrollFiller {
+  float: left;
+  border: 1px solid #dddddd;
+}
 
 /* This file contains variable declarations (do not remove this line) */
 /*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
@@ -872,6 +983,37 @@ div.ui-grid-cell input.ng-valid {
 * @section font library path
 */
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+
+/* This file contains variable declarations (do not remove this line) */
+/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+/**
+* @section Grid styles
+*/
+/**
+* @section Header styles
+*/
+/** @description Colors for header gradient */
+/**
+* @section Grid body styles
+*/
+/** @description Colors used for row alternation */
+/**
+* @section Sort arrow colors
+*/
+/**
+* @section Scrollbar styles
+*/
+/**
+* @section font library path
+*/
+/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid-group-header-row {
+  font-weight: bold !important;
+}
+.ui-grid-grouping-row-header-buttons.ui-grid-group-header {
+  cursor: pointer;
+  opacity: 1;
+}
 
 /* This file contains variable declarations (do not remove this line) */
 /*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
@@ -922,7 +1064,7 @@ div.ui-grid-cell input.ng-valid {
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .movingColumn {
   position: fixed;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #dddddd;
   box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
 }
 .movingColumn .ui-grid-icon-angle-down {
@@ -1042,55 +1184,55 @@ div.ui-grid-cell input.ng-valid {
   box-sizing: border-box;
   border-right: 1px solid;
   border-width: 1px;
-  border-color: #aeaeae;
+  border-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
   box-sizing: border-box;
   border-right: 1px solid;
   border-width: 1px;
-  border-color: #aeaeae;
+  border-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:not(:last-child) .ui-grid-vertical-bar,
 .ui-grid-pinned-container .ui-grid-cell:not(:last-child) .ui-grid-vertical-bar {
   width: 1px;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:not(:last-child) .ui-grid-vertical-bar {
-  background-color: #d4d4d4;
+  background-color: #dddddd;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:not(:last-child) .ui-grid-vertical-bar {
-  background-color: #aeaeae;
+  background-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:last-child .ui-grid-vertical-bar {
   right: -1px;
   width: 1px;
-  background-color: #aeaeae;
+  background-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-header-cell:first-child {
   box-sizing: border-box;
   border-left: 1px solid;
   border-width: 1px;
-  border-color: #aeaeae;
+  border-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-cell:first-child {
   box-sizing: border-box;
   border-left: 1px solid;
   border-width: 1px;
-  border-color: #aeaeae;
+  border-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-header-cell:not(:first-child) .ui-grid-vertical-bar,
 .ui-grid-pinned-container .ui-grid-cell:not(:first-child) .ui-grid-vertical-bar {
   width: 1px;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-header-cell:not(:first-child) .ui-grid-vertical-bar {
-  background-color: #d4d4d4;
+  background-color: #dddddd;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-right .ui-grid-cell:not(:last-child) .ui-grid-vertical-bar {
-  background-color: #aeaeae;
+  background-color: #b7b7b7;
 }
 .ui-grid-pinned-container.ui-grid-pinned-container-first .ui-grid-header-cell:first-child .ui-grid-vertical-bar {
   left: -1px;
   width: 1px;
-  background-color: #aeaeae;
+  background-color: #b7b7b7;
 }
 .ui-grid-render-container-body {
   float: left;
@@ -1133,13 +1275,13 @@ div.ui-grid-cell input.ng-valid {
   right: 0;
 }
 .ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #dddddd;
 }
 .ui-grid[dir=rtl] .ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
   border-right: 0;
 }
 .ui-grid[dir=rtl] .ui-grid-header-cell:last-child .ui-grid-column-resizer.left {
-  border-left: 1px solid #d4d4d4;
+  border-left: 1px solid #dddddd;
 }
 .ui-grid.column-resizing {
   cursor: col-resize;
@@ -1149,7 +1291,7 @@ div.ui-grid-cell input.ng-valid {
   top: 0;
   height: 100%;
   width: 1px;
-  background-color: #aeaeae;
+  background-color: #b7b7b7;
 }
 
 /* This file contains variable declarations (do not remove this line) */
@@ -1209,7 +1351,7 @@ div.ui-grid-cell input.ng-valid {
 */
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
-  background-color: #c9dde1 !important;
+  background-color: #e0eff9 !important;
 }
 .ui-grid-disable-selection {
   -webkit-touch-callout: none;
@@ -1311,6 +1453,14 @@ div.ui-grid-cell input.ng-valid {
   content: '\c363';
 }
 /* '썣' */
+.ui-grid-icon-indent-left:before {
+  content: '\e800';
+}
+/* '' */
+.ui-grid-icon-indent-right:before {
+  content: '\e801';
+}
+/* '' */
 .ui-grid-icon-spin5:before {
   content: '\ea61';
 }
