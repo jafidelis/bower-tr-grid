@@ -1,5 +1,5 @@
 /*!
- * ui-grid - v3.0.0-rc.20-9229392 - 2015-04-30
+ * ui-grid - v3.0.0-rc.20-f64ce8c - 2015-04-30
  * Copyright (c) 2015 ; License: MIT 
  */
 .ui-grid {
@@ -760,6 +760,9 @@ input[type="text"].ui-grid-filter-input:hover {
 * @section font library path
 */
 /*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
+.ui-grid {
+  width: 100%;
+}
 .ui-grid-viewport {
   overflow-x: auto !important;
 }
@@ -793,7 +796,6 @@ input[type="text"].ui-grid-filter-input:hover {
   top: -1px;
   right: -1px;
   border: none;
-  min-height: 33px;
 }
 .ui-grid-icon-container {
   height: 33px;
@@ -810,6 +812,7 @@ input[type="text"].ui-grid-filter-input:hover {
 }
 .ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid {
   border: none;
+  overflow-y: visible;
 }
 .ui-grid-menu {
   margin-top: 3px;
