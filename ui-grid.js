@@ -1,5 +1,5 @@
 /*!
- * ui-grid - v3.0.0-rc.20-9229392 - 2015-04-28
+ * ui-grid - v3.0.0-rc.20-9229392 - 2015-04-30
  * Copyright (c) 2015 ; License: MIT 
  */
 
@@ -122,6 +122,28 @@
     }
   });
 
+})();
+
+(function() {
+    'use strict';
+    
+    angular.module('ui.grid')
+        .directive('uiGridBtnEdit', function() {
+            return {
+                restrict: 'E',
+                replace: true,
+                require: '^uiGrid',
+                templateUrl: 'ui-grid/uiGridBtnEdit'
+            };
+        })
+        .directive('uiGridBtnDelete', function() {
+            return {
+                restrict: 'E',
+                replace: true,
+                require: '^uiGrid',
+                templateUrl: 'ui-grid/uiGridBtnDelete'
+            };
+        });
 })();
 
 angular.module('ui.grid').directive('uiGridCell', ['$compile', '$parse', 'gridUtil', 'uiGridConstants', function ($compile, $parse, gridUtil, uiGridConstants) {
@@ -22825,6 +22847,16 @@ angular.module('ui.grid').run(['$templateCache', function($templateCache) {
     "\r" +
     "\n" +
     "    {{ grid.customStyles }}</style><div ui-grid-menu-button ng-if=\"grid.options.enableGridMenu\"></div><div ng-if=\"grid.hasLeftContainer()\" style=\"width: 0\" ui-grid-pinned-container=\"'left'\"></div><div ui-grid-render-container container-id=\"'body'\" col-container-name=\"'body'\" row-container-name=\"'body'\" bind-scroll-horizontal=\"true\" bind-scroll-vertical=\"true\" enable-horizontal-scrollbar=\"grid.options.enableHorizontalScrollbar\" enable-vertical-scrollbar=\"grid.options.enableVerticalScrollbar\"></div><div ng-if=\"grid.hasRightContainer()\" style=\"width: 0\" ui-grid-pinned-container=\"'right'\"></div><div ui-grid-grid-footer ng-if=\"grid.options.showGridFooter\"></div><div ui-grid-column-menu ng-if=\"grid.options.enableColumnMenus\"></div><div ng-transclude></div></div>"
+  );
+
+
+  $templateCache.put('ui-grid/uiGridBtnDelete',
+    "<button type=\"button\" class=\"btn tr-btn btn-danger\"><i class=\"glyphicon glyphicon-trash\"></i></button>"
+  );
+
+
+  $templateCache.put('ui-grid/uiGridBtnEdit',
+    "<button type=\"button\" class=\"btn tr-btn btn-info\"><i class=\"glyphicon glyphicon-pencil\"></i></button>"
   );
 
 

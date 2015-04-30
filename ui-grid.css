@@ -1,5 +1,5 @@
 /*!
- * ui-grid - v3.0.0-rc.20-9229392 - 2015-04-28
+ * ui-grid - v3.0.0-rc.20-9229392 - 2015-04-30
  * Copyright (c) 2015 ; License: MIT 
  */
 .ui-grid {
@@ -819,6 +819,7 @@ input[type="text"].ui-grid-filter-input:hover {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 99;
 }
 .ui-grid-menu-mid:before {
   content: "";
@@ -849,6 +850,15 @@ input[type="text"].ui-grid-filter-input:hover {
 .ui-grid-menu .ui-grid-menu-inner ul li.ui-grid-menu-item-active {
   box-shadow: none;
   background-color: #e0eff9;
+}
+.tr-btn {
+  padding: 2px 6px;
+  margin: 1.5px 0 1.5px 6px;
+  border-radius: 3px;
+}
+.tr-btn:focus,
+.tr-btn:hover {
+  outline: 0;
 }
 
 /* This file contains variable declarations (do not remove this line) */
